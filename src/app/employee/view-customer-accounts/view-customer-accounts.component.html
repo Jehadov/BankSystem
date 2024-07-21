@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <h2 class=" border border-primary text-center">Account Access</h2>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>Account ID</th>
+          <th>fullname</th>
+          <th>email</th>
+          <th>Role</th>
+          <th>Access</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let account of this.use.users">
+        <tr *ngIf="account.access != 'true'">
+          <td>{{ account.id }}</td>
+          <td>{{ account.fullname }}</td>
+          <td>{{ account.email }}</td>
+          <td>{{ account.roleName }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="Accept(account.id)">Accept</button>
+            <button class="btn btn-danger btn-sm" (click)="Reject(account.id)">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div class="container mt-5">
+    <h2 class="mt-5 border border-primary text-center">all Accounts in the system</h2>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>Account ID</th>
+          <th>fullname</th>
+          <th>Balance</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let account of this.ser.allAccount">
+          <td>{{ account.userId }}</td>
+          <td>{{ account.fullname }}</td>
+          <td>{{ account.balance }}</td>
+          <td>{{ account.roleName }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

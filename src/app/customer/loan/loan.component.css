@@ -1,0 +1,13 @@
+.container {
+    max-width: 800px;
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .table {
+    margin-bottom: 0;
+  }
+  

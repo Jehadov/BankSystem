@@ -1,0 +1,42 @@
+
+<app-header></app-header>
+
+<div class="container mt-5">
+    <h2>Transfers</h2>
+    <h1><b class="text-dark">your Balance is </b> <b class="text-danger">{{Loginuser.OpenAccount.balance}} <b class="text-success">JD</b></b></h1>
+    <form [formGroup]="formTransfer">
+      <div class="form-group">
+        <label for="toCustomerId">To Customer Email</label>
+        <input type="email" id="toCustomerId" class="form-control" formControlName="Email">
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" class="form-control" formControlName="Amount">
+      </div>
+      <div class="form-group">
+        <label for="transferDate">date-time</label>
+        <input type="datetime-local" id="transferDate" class="form-control" formControlName="transferDate">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="transfer()" >Transfer</button>
+    </form>
+  
+    <h3 class="mt-5">Transfer History</h3>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Transfer ID</th>
+          <th>Amount</th>
+          <th>Transfer Date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let transfer of this.Loginuser.OpenTransfer">
+        <tr *ngIf="transfer.fromCustomerId == userid">
+          <td>{{ transfer.transferId }}</td>
+          <td>{{ transfer.amount }}</td>
+          <td>{{ transfer.transferDate  }}</td>
+        </tr>
+      </tbody>
+    </table>
+     
+
+<app-footer></app-footer>

@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container mt-5">
+  <h2>Loans</h2>
+  <h1><b class="text-dark">your Balance is </b> <b class="text-danger">{{Loginuser.OpenAccount.balance}} <b class="text-success">JD</b></b></h1>
+  <form [formGroup]="formloan">
+    <div class="form-group">
+      <label for="loan_type">Loan Type</label>
+      <input type="text" id="loan_type" class="form-control" formControlName="loanType">
+    </div>
+    <div class="form-group">
+      <label for="loan_amount">Loan Amount</label>
+      <input type="number" id="loan_amount" class="form-control" formControlName="loanAmount">
+    </div>
+    <div class="form-group">
+      <label for="loan_start_date">Loan Start Date</label>
+      <input type="datetime-local" id="loan_start_date" class="form-control" formControlName="loanStartDate">
+    </div>
+    <div class="form-group">
+      <label for="loan_end_date">Loan End Date</label>
+      <input type="datetime-local" id="loan_end_date" class="form-control" formControlName="loanEndDate">
+    </div>
+    <button type="submit"(click)="LoanAction()" class="btn btn-primary">Add Loan</button>
+  </form>
+
+  <h3 class="mt-5">Loan History</h3>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Loan ID</th>
+
+        <th>Loan Type</th>
+        <th>Loan Amount</th>
+        <th>Loan Start Date</th>
+        <th>Loan End Date</th>
+        <th>Active State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let loan of this.Loginuser.OpenLoan">
+        <td>{{ loan.loanId }}</td>
+        <td>{{ loan.loanType }}</td>
+        <td>{{ loan.loanAmount }}</td>
+        <td>{{ loan.loanStartDate }}</td>
+        <td>{{ loan.loanEndDate  }}</td>
+        <td *ngIf="loan.activeState==1;"> Accepted</td>
+        <td *ngIf="loan.activeState==0;"> Not Accepted</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <app-footer></app-footer>

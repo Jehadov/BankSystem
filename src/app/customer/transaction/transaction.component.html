@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+    <h2>Transactions</h2>
+    <h1><b class="text-dark">your Balance is </b> <b class="text-danger">{{Loginuser.OpenAccount.balance}} <b class="text-success">JD</b></b></h1>
+    <form  [formGroup]="formTransaction">
+      <div class="form-group mt-2 mb-2">
+        <label for="currency">currency</label>
+        <select name="currency" formControlName="currancy" id="currancy"class="form-select" >
+          <option value="JD">JD</option>
+          <option value="$">$</option>
+        </select>     
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" class="form-control" formControlName="Amount">
+      </div>
+      <div class="form-group">
+        <label for="transaction_type">Transaction Type</label>
+        <input type="text" id="transaction_type" class="form-control" formControlName="transactionType">
+      </div>
+      <button type="submit" class="btn btn-primary transaction" (click)="transaction()">Add Transaction</button>
+    </form>
+    <h3 class="mt-5">Transaction History</h3>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Currency</th>
+          <th>Amount</th>
+          <th>Transaction Type</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let transaction of Loginuser.OpenTransaction">
+          <tr *ngIf="userid == transaction.accountId">
+            <td>{{ transaction.transactionId }}</td>
+            <td>{{ transaction.currancy }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.transactionType }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+<app-footer></app-footer>

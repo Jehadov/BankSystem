@@ -1,0 +1,41 @@
+ <div class="container user-details-container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="user-details-form" [formGroup]="formUser">
+          <div class="text-center">
+            <img src="path/to/image.jpg" alt="User Image" id="userImage" formControlName="myImage">
+          </div>
+          <div class="form-group" *ngIf="this.editing==true">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" value="{{this.Loginuser.OpenAccount.fullname}}"  formControlName="fullname">
+          </div>
+          <div class="form-group" *ngIf="this.editing==false">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" value="{{this.Loginuser.OpenAccount.fullname}}" readonly>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" value="{{this.Loginuser.OpenAccount.email}}"  readonly>
+          </div>
+          <div class="form-group">
+            <label for="balance">Balance</label>
+            <input type="number" class="form-control" id="balance" value="{{this.Loginuser.OpenAccount.balance}}" readonly >
+          </div>
+          <div class="form-group" *ngIf="this.editing==true">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" value="{{this.Loginuser.OpenAccount.passwords}}" formControlName="passwords">
+          </div>
+          <div class="form-group" *ngIf="this.editing==false">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" value="{{this.Loginuser.OpenAccount.passwords}}" readonly >
+          </div>
+          <div class="form-group">
+            <label for="roleName">Role</label>
+            <input type="text" class="form-control" id="roleName" value="{{this.Loginuser.OpenAccount.roleName}}" readonly >
+          </div>
+          <button type="submit" class="btn btn-warning btn-block"(click)="Edit()">Edit</button>
+          <button type="submit" class="btn btn-custom btn-block"(click)="savedata(this.Loginuser.OpenAccount.fullname,this.Loginuser.OpenAccount.email,this.Loginuser.OpenAccount.balance,this.Loginuser.OpenAccount.passwords,this.Loginuser.OpenAccount.roleName)" *ngIf="this.editing==true">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>

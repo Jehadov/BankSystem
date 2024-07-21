@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Bank Access Management</h1>
+        <br>
+        <p class="lead">Manage customer accounts, loans, and transactions.</p>
+    </div>
+    <div class="col-md-6 ">
+        <img src="https://media4.giphy.com/media/W29ZemswifNSTAdO1H/200w.gif" class="img-fluid" alt="Bank">
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Loans</h5>
+                    <p class="card-text">Create, read, update, and delete loan information.</p>
+                    <a href="Employee/ManageLoans" class="btn btn-primary" >Manage Loans</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">View Customer Accounts</h5>
+                    <p class="card-text">View and manage customer account information.</p>
+                    <a href="Employee/ViewCustomerAccounts" class="btn btn-primary" onclick="showSection('accounts')">View Accounts</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">View Transactions</h5>
+                    <p class="card-text">View and analyze transaction records.</p>
+                    <a href="Employee/ViewTransactions" class="btn btn-primary" onclick="showSection('transactions')">View Transactions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">

@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <h2>Welcome Back  </h2>
+                    <h2 class="text-danger ms-3 font-weight-bolder">{{this.Loginuser.OpenAccount.fullname}}</h2>
+                </div>
+                <p>Your trusted partner in managing your finances.</p>
+                <a href="/Customer/Details"class="btn btn-primary">Account details</a>
+                <p class="h1">Check Balance </p>
+                <div class="d-flex" >
+                    <p class="h1 text-danger"style="font-size: 100px;">{{this.Loginuser.OpenAccount.balance}}</p>
+                    <p class="h1 text-secondary ms-2"style="font-size: 100px;">JD</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/Images/Watermelon.gif" class="img-fluid" alt="Bank">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Transactions</h5>
+                        <p class="card-text">View your account balance and transaction history.</p>
+                        <a href="Customer/Transaction" class="btn btn-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Transfer Money</h5>
+                        <p class="card-text">Transfer money between accounts or to other users.</p>
+                        <a href="Customer/Transfer" class="btn btn-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Loan money</h5>
+                        <p class="card-text">Loan some money, but the Employee should accept the loan first.</p>
+                        <a href="Customer/Loan" class="btn btn-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<app-footer></app-footer>  

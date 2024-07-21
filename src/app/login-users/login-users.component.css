@@ -1,0 +1,49 @@
+body {
+
+    background-image: url(https://cdn.phenompeople.com/CareerConnectResources/MAMCGLOBAL/images/mercer-career-ambient-hero-cut-out-butterfly-1678994320049.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  .login-container {
+    margin-top: 100px;
+  }
+  .login-form {
+    background-color: #9b9b9b96;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(175, 137, 137, 0.1);
+  }
+  .form-control {
+    background-color: #b3b3b3;
+    border: none;
+    color: #ffffff;
+  }
+  .form-group {
+   margin-bottom: 30px;
+  }
+  .form-control:focus {
+    background-color: #5f5f5f;
+    border-color: #ff4081;
+  }
+  .btn-custom {
+    background-color: #ff4081;
+    border: none;
+    color: #fff;
+  }
+  .btn-custom:hover {
+    background-color: #ff1a70;
+  }
+  a{
+    text-decoration: none;
+    color: #97c1ff;
+    margin-bottom: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+  }
+  a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    }

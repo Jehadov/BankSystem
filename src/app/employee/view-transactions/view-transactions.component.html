@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container mt-5">
+  <h2>Transactions History</h2>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Currency</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Account ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of Loginuser.OpenTransaction">
+        <td>{{ transaction.transactionId }}</td>
+        <td>{{ transaction.currancy }}</td>
+        <td>{{ transaction.amount }}</td>
+        <td>{{ transaction.transactionType }}</td>
+        <td>{{ transaction.accountId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<div class="container mt-5">
+  <h3 class="mt-5">Transfer History</h3>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Transfer ID</th>
+        <th>Amount</th>
+        <th>Transfer Date</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let transfer of this.Loginuser.OpenTransfer">
+        <td>{{ transfer.transferId }}</td>
+        <td>{{ transfer.amount }}</td>
+        <td>{{ transfer.transferDate  }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

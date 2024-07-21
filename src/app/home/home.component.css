@@ -1,0 +1,73 @@
+.container {
+    padding: 20px;
+}
+
+.section {
+    
+    margin: 20px 0;
+}
+
+ .section h2 {
+    color: #0044cc;
+  }
+
+    .section p {
+    color: #333;
+  }
+
+
+
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+    .slide img {
+        width: 100%;
+        display: block;
+    }
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+    background: #ddd;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    .sidebar { width: 200px; background-color: #f4f4f4; position: fixed; height: 100%; padding-top: 20px; }
+    .sidebar a { display: block; padding: 10px; text-decoration: none; color: #333; }
+    .sidebar a:hover { background-color: #ddd; }
+    .main-content { margin-left: 220px; padding: 20px; }
+    .card { background-color: white; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .card h3 { margin-top: 0; }
+    .transactions { width: 100%; border-collapse: collapse; }
+    .transactions th, .transactions td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+    .transactions th { background-color: #f4f4f4; }
+    
